@@ -24,7 +24,7 @@ export function HomeBlock() {
         spacing={3}
         flex={1}
       >
-        <Stack>
+        <Stack width="50%">
           <Fade direction="up" triggerOnce cascade>
             <Stack
               onMouseEnter={() => setIsTouch(true)}
