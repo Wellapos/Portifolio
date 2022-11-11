@@ -12,14 +12,14 @@ import { Project } from 'components/Home/HomeBlock/Projects/Project'
 export function ProjectsTemplate() {
   const navigate = useNavigate()
   return (
-    <Box height="100vh" bgcolor="black">
+    <Box bgcolor="black" height="100vh">
       <motion.div
         initial={{ width: '0%' }}
         transition={{ duration: 1 }}
         animate={{ width: '100%' }}
         exit={{ width: '250%' }}
       >
-        <Container>
+        <Container maxWidth="lg">
           <Stack justifyContent="center" alignItems="flex-end" pt={20}>
             <Typography
               variant="h6"
