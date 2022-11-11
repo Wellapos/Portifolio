@@ -1,12 +1,12 @@
 import { CssBaseline, ThemeProvider } from '@mui/material'
 import { theme } from 'global/styles/theme'
-import { HomePage } from 'pages/Home'
+import { Routes } from 'routes'
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <HomePage />
+      <Routes />
     </ThemeProvider>
   )
 }
