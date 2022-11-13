@@ -14,17 +14,16 @@ export function HomeBlock() {
   const [isTouch3, setIsTouch3] = useState(false)
 
   return (
-    <Box height="100vh">
+    <Box height="100%">
       <Stack
         justifyContent="center"
         alignItems="center"
         alignContent="center"
         direction="row"
-        height="100%"
+        height="100vh"
         spacing={3}
-        flex={1}
       >
-        <Stack width="50%">
+        <Stack>
           <Fade direction="up" triggerOnce cascade>
             <Stack
               onMouseEnter={() => setIsTouch(true)}
@@ -49,7 +48,7 @@ export function HomeBlock() {
                   <Typography variant="h1">Contato</Typography>
                 </LightSpeed>
               ) : (
-                <Typography variant="h1" color="red">
+                <Typography variant="h1" color="#008DC5">
                   Eu sou o
                 </Typography>
               )}
@@ -60,10 +59,12 @@ export function HomeBlock() {
             >
               {isTouch3 ? (
                 <LightSpeed>
-                  <Typography variant="h1">Sobre mim</Typography>
+                  <Link to="/about" style={{ textDecoration: 'none' }}>
+                    <Typography variant="h1">Sobre mim</Typography>
+                  </Link>
                 </LightSpeed>
               ) : (
-                <Typography variant="h1" color="red">
+                <Typography variant="h1" color="#008DC5">
                   Wellington!
                 </Typography>
               )}

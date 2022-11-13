@@ -1,4 +1,3 @@
-import { HomePage } from 'pages/Home'
 import { ProjectsPage } from 'pages/Projects'
 import {
   Routes as Router,
@@ -6,6 +5,9 @@ import {
   Route,
   useLocation
 } from 'react-router-dom'
+
+import { HomePage } from 'pages/Home'
+import { AboutPage } from 'pages/About'
 
 import { AnimatePresence } from 'framer-motion'
 
@@ -15,11 +17,11 @@ export function AnimatedRoutes() {
   return (
     <AnimatePresence>
       <Router location={location} key={location.pathname}>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/projects" element={<ProjectsPage />} />
-        <Route path="/contact" element={<h1>contact</h1>} />
-        <Route path="/about" element={<h1>about</h1>} />
-        <Route path="*" element={<Navigate to={'/'} />} />
+        <Route path="/" index element={<HomePage />} />
+        <Route path="/projects" index element={<ProjectsPage />} />
+        <Route path="/contact" index element={<h1>contact</h1>} />
+        <Route path="/about" index element={<AboutPage />} />
+        <Route path="*" index element={<Navigate to={'/'} />} />
       </Router>
     </AnimatePresence>
   )
