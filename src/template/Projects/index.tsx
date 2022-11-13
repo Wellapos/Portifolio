@@ -12,9 +12,9 @@ export function ProjectsTemplate() {
   return (
     <motion.div
       initial={{ width: '0%' }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 1.5 }}
       animate={{ width: '100%' }}
-      exit={{ width: '250%' }}
+      exit={{ width: '300%', height: '0vh' }}
     >
       <Container maxWidth="lg">
         <Header />

@@ -1,23 +1,41 @@
 import { Container, Stack, Typography } from '@mui/material'
+import { Header } from 'components/Header'
 
 import { motion } from 'framer-motion'
-import { useNavigate } from 'react-router-dom'
+import { Fade } from 'react-awesome-reveal'
 
 export function AboutTemplate() {
-  const navigate = useNavigate()
-
   return (
-    <motion.div>
+    <motion.div
+      initial={{ width: '0%', height: '0%' }}
+      transition={{ duration: 1.5 }}
+      animate={{ width: '100%', height: '0%' }}
+      exit={{ width: '300%', height: '0vh' }}
+    >
       <Container maxWidth="lg">
-        <Stack justifyContent="center" alignItems="flex-end" pt={20}>
-          <Typography
-            variant="h6"
-            onClick={() => navigate('/')}
-            sx={{ cursor: 'pointer' }}
-          >
-            Home
+        <Header />
+        <Fade direction="up" triggerOnce cascade delay={750}>
+          <Stack mb={20}>
+            <Typography variant="h1">
+              Front End developer & Tech enthusiast.
+            </Typography>
+          </Stack>
+          <Typography variant="h4" py={5}>
+            I&apos;m a Front End developer with a passion for learning new
+            technologies. and building cool stuff.
           </Typography>
-        </Stack>
+          <Typography variant="h4" py={5}>
+            I&apos;m currently working as a Front End developer at a company
+            called AngelLira in Chapecó, Santa Catarina, Brazil.
+          </Typography>
+          <Typography variant="h4" py={5}>
+            I&apos;m also a Tech enthusiast, I love to learn new technologies
+            and build cool stuff with them.
+          </Typography>
+          <Typography variant="h4" py={5}>
+            I&apos;m currently learning React Native and NodeJs.
+          </Typography>
+        </Fade>
       </Container>
     </motion.div>
   )
