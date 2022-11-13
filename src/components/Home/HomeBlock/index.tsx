@@ -45,7 +45,9 @@ export function HomeBlock() {
             >
               {isTouch2 ? (
                 <LightSpeed bottom>
-                  <Typography variant="h1">Contato</Typography>
+                  <Link to="/contact" style={{ textDecoration: 'none' }}>
+                    <Typography variant="h1">Contato</Typography>
+                  </Link>
                 </LightSpeed>
               ) : (
                 <Typography variant="h1" color="#008DC5">

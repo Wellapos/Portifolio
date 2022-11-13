@@ -8,6 +8,7 @@ import {
 
 import { HomePage } from 'pages/Home'
 import { AboutPage } from 'pages/About'
+import { ContactPage } from 'pages/Contact'
 
 import { AnimatePresence } from 'framer-motion'
 
@@ -19,7 +20,8 @@ export function AnimatedRoutes() {
       <Router location={location} key={location.pathname}>
         <Route path="/" index element={<HomePage />} />
         <Route path="/projects" index element={<ProjectsPage />} />
-        <Route path="/contact" index element={<h1>contact</h1>} />
+        <Route path="/project/:id" index element={<ProjectsPage />} />
+        <Route path="/contact" index element={<ContactPage />} />
         <Route path="/about" index element={<AboutPage />} />
         <Route path="*" index element={<Navigate to={'/'} />} />
       </Router>
